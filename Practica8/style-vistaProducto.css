@@ -1,0 +1,112 @@
+/* ================== RESET ================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================== BODY ================== */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* ================== MAIN ================== */
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* ================== TITULO ================== */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #222;
+}
+
+/* ================== CONTENEDOR ================== */
+.container-product {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* ================== CARD ================== */
+.practice-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    width: 100%;
+    align-items: start;
+}
+
+/* ================== IMAGEN ================== */
+.information-image img {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+    display: block;
+}
+
+/* ================== INFO ================== */
+.information-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ================== TITULO PRODUCTO ================== */
+.practice-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111;
+}
+
+/* ================== DESCRIPCION ================== */
+.practice-description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* ================== CATEGORIA / RATING ================== */
+.practice-category,
+.practice-rating {
+    font-size: 13px;
+    color: #777;
+}
+
+/* ================== PRECIO ================== */
+.practice-price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0077ff;
+    margin-top: 10px;
+}
+
+/* ================== BOTON ================== */
+.btn-buy {
+    margin-top: 15px;
+    padding: 10px 14px;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.btn-buy:hover {
+    background-color: #000;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+    .practice-card {
+        grid-template-columns: 1fr;
+    }
+}

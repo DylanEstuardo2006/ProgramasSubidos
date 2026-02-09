@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  width: 220px;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-top: 4px solid #0077b6;
+}
+.btnCargarLaboratorios
+{
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
