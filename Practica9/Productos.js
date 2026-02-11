@@ -1,4 +1,4 @@
-const urlApi = 'https://dummyjson.com/products?limit=12';
+const urlApi = 'https://dummyjson.com/products?limit=32';
 
 let productos = [];
 function cargarProductos() 
@@ -40,21 +40,61 @@ function mostrarProductos(productos)
 
 document.addEventListener('DOMContentLoaded', () => {
   
+  //Filtrador de categorias
+    const selectCategoria = document.getElementById('buscador-categoria');
+
+    selectCategoria.addEventListener('change', () => {
+    aplicarFiltros();
+    });
+  
   cargarProductos();
 
   const inputBuscador = document.getElementById('buscador');
 
   inputBuscador.addEventListener('input', () => {
 
-     const texto = inputBuscador.value.toLowerCase();
-
-     const filtrados = productos.filter(producto =>
-
-     producto.title.toLowerCase().includes(texto)
-    );
-    
-    mostrarLista(filtrados);
+   aplicarFiltros();
 
   });
 
 });
+
+function aplicarFiltros() {
+  const texto = document.getElementById('buscador').value.toLowerCase();
+  const categoria = document.getElementById('buscador-categoria').value;
+
+  let filtrados = productos.filter(producto => {
+    const coincideTexto = producto.title.toLowerCase().includes(texto);
+    const coincideCategoria = categoria === "0" || producto.category === categoria;
+
+    return coincideTexto && coincideCategoria;
+  });
+
+  mostrarLista(filtrados);
+}
+
+urlApiCategory = 'https://dummyjson.com/products/category-list'; 
+
+function cargarCategory()
+{
+     fetch(urlApiCategory)
+     .then(res => res.json())
+     .then(data => {
+        const categorias = data;
+         
+         asignarCategorias(categorias);
+     })
+}
+
+const asignarCategorias = (categorias) => {
+  const select = document.getElementById('buscador-categoria');
+  select.innerHTML = `<option value="0">Categorias</option>`;
+
+  categorias.forEach(categoria => {
+    const opcion = document.createElement("option");
+    opcion.value = categoria;
+    opcion.textContent = categoria;
+    select.appendChild(opcion);
+  });
+};
+cargarCategory();

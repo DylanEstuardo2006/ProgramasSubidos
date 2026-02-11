@@ -1,158 +1,34 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Página Principal - Programas</title>
-<style>
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Arial, Helvetica, sans-serif;
-}
+<!DOCTYPE html> 
+     <html lang="es">
+         <head> 
+            <meta charset="UTF-8"> 
+            <title>Portafolio Dinámico</title> 
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+            <link rel="stylesheet" href="style.css"> 
+         </head> 
+<body> 
+    <header class="perfil"> 
+        <img id="avatar" class="avatar"> 
+        <div> 
+            <h1 id="nombre"></h1> 
+            <p id="bio"></p> 
+            <p id="ubicacion"></p> 
+        </div> 
+    </header> 
+    <main class="contenedor">
+      <section class="repos">
+        <h2>🚀 Mis Proyectos</h2>
+         <div id="listaRepos" class="grid">
 
+         </div>
+      </section>
+      <aside class="comunidad">
+       <h2>👥 Comunidad</h2>
+        <div id="listaFollowers" class="followers">
 
-body {
-background: #f4f6f9;
-}
-
-
-header {
-background: #1f2937;
-color: white;
-padding: 20px;
-text-align: center;
-box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-
-header h1 {
-font-size: 28px;
-}
-
-
-main {
-padding: 40px 20px;
-max-width: 1100px;
-margin: auto;
-}
-
-
-.programas-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 25px;
-}
-
-
-.programa-card {
-background: white;
-border-radius: 12px;
-padding: 20px;
-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-transition: transform 0.2s ease, box-shadow 0.2s ease;
-cursor: pointer;
-}
-
-
-.programa-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-}
-
-
-.programa-card h2 {
-margin-bottom: 10px;
-color: #111827;
-font-size: 20px;
-}
-
-
-.programa-card p {
-color: #4b5563;
-font-size: 14px;
-margin-bottom: 15px;
-}
-
-
-.btn {
-display: inline-block;
-padding: 8px 14px;
-background: #2563eb;
-color: white;
-border-radius: 6px;
-text-decoration: none;
-font-size: 14px;
-transition: background 0.2s ease;
-}
-
-
-.btn:hover {
-background: #1d4ed8;
-}
-
-
-footer {
-text-align: center;
-padding: 15px;
-background: #e5e7eb;
-margin-top: 40px;
-font-size: 14px;
-color: #374151;
-}
-</style>
-</head>
-<body>
-
-
-<header>
-<h1>Panel Principal de Programas</h1>
-</header>
-
-
-<main>
-<section class="programas-grid">
-<div class="programa-card">
-<h2>Practica 2 </h2>
-<p>1 programa en clase, consistio en tarjetas aplicando cosas basicas en JavaScript</p>
-<a href="Practica2(Classroom)/index.html" class="btn">Abrir</a>
-</div>
-
-
-<div class="programa-card">
-<h2>Practica 4</h2>
-<p>Practica de Geolocalización, muestra en un pentagono la ubicación de mi casa.</p>
-<a href="Practica4/index.html" class="btn">Abrir</a>
-</div>
-
-<div class="programa-card">
-<h2>Practica 5</h2>
-<p>Descripción breve del programa. Aquí puedes explicar qué hace.</p>
-<a href="Practica-5-Dragon-ball/index.html" class="btn">Abrir</a>
-</div>
-
-<div class="programa-card">
-<h2>Practrica 6</h2>
-<p>Uso de la apí que ocupamos el cuatri pasado en programación movil</p>
-<a href="Practica6/index.html" class="btn">Abrir</a>
-</div>
-
-<div class="programa-card">
-<h2>Practica 8 y 9 Complemento</h2>
-<p>Practica con DummyJson</p>
-<a href="Practica8/index.html" class="btn">Abrir</a>
-</div>
-
-
-</section>
-</main>
-
-
-<footer>
-© 2026 - Página de Programas
-</footer>
-
-
-</body>
+        </div>
+       </aside>
+    </main>
+    <script src="main.js"></script>
+  </body>
 </html>

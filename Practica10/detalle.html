@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del Cóctel</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .detalle-card {
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .drink-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+    <header class="p-3 text-bg-dark"> 
+        <div class="container"> 
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"> 
+                <a href="/" style= "display: block" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"> 
+              </a> 
+              <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"> 
+                <li>
+                    <a href="index.html" class="nav-link px-2 text-secondary">Regresar</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-2 text-white">Contactanos</a>
+                </li> 
+                <li>
+                    <a href="#" class="nav-link px-2 text-white">Quienes somos</a>
+                </li> 
+                <li>
+                    <a href="#" class="nav-link px-2 text-white">Información</a>
+                </li> 
+               </ul> 
+            </div> 
+        </div> 
+    </header>
+<div class="container my-5">
+
+  <div class="card detalle-card">
+
+    <div class="row g-0">
+
+      <!-- Imagen -->
+      <div class="col-md-5">
+        <img id="drinkImage"
+             src="https://via.placeholder.com/600"
+             class="drink-img"
+             alt="Imagen del cóctel">
+      </div>
+
+      <!-- Información -->
+      <div class="col-md-7">
+        <div class="card-body p-4">
+
+          <h2 id="drinkTitle" class="mb-3">
+            Nombre del Cóctel
+          </h2>
+
+          <p class="lead mb-1">
+            <strong>Categoría:</strong>
+            <span id="drinkCategory">---</span>
+          </p>
+
+          <p class="lead mb-1">
+            <strong>Tipo:</strong>
+            <span id="drinkAlcoholic">---</span>
+          </p>
+
+          <p class="lead mb-3">
+            <strong>Vaso:</strong>
+            <span id="drinkGlass">---</span>
+          </p>
+
+          <hr>
+
+          <h4>Instrucciones:</h4>
+          <p id="drinkInstructions">
+            Aquí van las instrucciones del cóctel…
+          </p>
+
+          <hr>
+
+          <h4>Ingredientes: </h4>
+          <ul id="drinkIngredients" class="list-group">
+            
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="detalle.js"></script>
+
+</body>
+</html>

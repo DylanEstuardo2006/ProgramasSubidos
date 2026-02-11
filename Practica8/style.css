@@ -23,7 +23,7 @@ main {
 
 /* ===== TITULO ===== */
 h1 {
-    text-align: center;
+ 
     margin-bottom: 40px;
     color: #222;
 }
@@ -102,6 +102,7 @@ h1 {
   border: 1px solid #ccc;
   outline: none;
   transition: all 0.3s ease;
+  margin-left: 20px;
 }
 
 #buscador:focus {
@@ -116,4 +117,21 @@ h1 {
 .divs-section 
 {
    width: 50%;
+}
+article
+{
+     display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+    
+}
+#buscador-categoria{
+  width: 220px;
+  padding: 12px 18px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
 }
