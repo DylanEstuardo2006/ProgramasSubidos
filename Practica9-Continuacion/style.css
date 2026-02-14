@@ -1,0 +1,13 @@
+/* ===== MAIN ===== */
+.container-main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding: 30px 60px;
+    border-radius: 12px;
+}
+.descripcion-admin{
+  max-width: 250px;   /* ancho máximo */
+  word-wrap: break-word; 
+  white-space: normal;
+}

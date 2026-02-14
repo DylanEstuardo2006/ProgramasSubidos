@@ -1,4 +1,4 @@
-
+ 
 const guardarproducto=()=>{
     //creamos las varioables de los elemntos con los que vamos a interactuar 
     const titulo=document.getElementById("titulo").value

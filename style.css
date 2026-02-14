@@ -83,3 +83,30 @@ transition: 0.3s;
 border-color: #58a6ff;
 transform: scale(1.1);
 }
+.follower-item {
+display: flex;
+align-items: center;
+gap: 10px;
+background: #161b22;
+padding: 8px 12px;
+border-radius: 8px;
+border: 1px solid #30363d;
+transition: 0.3s;
+}
+
+.follower-item:hover {
+border-color: #58a6ff;
+}
+
+.follower-item a {
+color: #58a6ff;
+text-decoration: none;
+font-size: 14px;
+font-weight: 500;
+}
+
+.follower-item img {
+width: 45px;
+border-radius: 50%;
+border: 2px solid #30363d;
+}

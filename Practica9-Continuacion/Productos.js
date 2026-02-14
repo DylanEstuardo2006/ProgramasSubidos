@@ -1,6 +1,7 @@
 const urlApi = 'https://dummyjson.com/products?limit=32';
 
 let productos = [];
+
 function cargarProductos() 
 { 
    fetch(urlApi)
@@ -8,9 +9,7 @@ function cargarProductos()
    .then(data => {
      productos = data.products;
       console.log("Datos recibidos", productos);
-    
-      mostrarLista(productos);
-  
+      mostrarLista(productos);  
     })
     .catch(error => {
       console.error('Error al cargar los productos:', error);
@@ -21,23 +20,24 @@ function mostrarLista(lista) {
   lista.forEach(producto => mostrarProductos(producto));
 }
 
-function mostrarProductos(productos)    
+function cargarProductosCatalogo(lista)
 {
+const fila = document.getElementById('tr');
+  fila.innerHTML = "";
 
- const contenedorProductos = document.createElement('div');
-  contenedorProductos.classList.add('practice-card');
-  contenedorProductos.innerHTML = 
-  ` 
-  <h3 class="practice-title"> ${productos.title} </h3>
-  <img src="${productos.images[0]}" alt="${productos.title}" width="100%" style="object-fit: contain; height: 300px;" onclick="window.location.href='vista-producto.html?idProducto=${productos.id}'">
-  <h4 class="practice-description"> Precio: $ ${productos.price} </h4>
-  <p class="practice-description"> Categoria: ${productos.category} </p>
-  <p class="practice-description"> Rating: ${productos.rating}</p>
-  `;
-  document.getElementById("products-container").appendChild(contenedorProductos);
-
+  lista.forEach(producto => {
+    fila.innerHTML += `
+      <tr>
+        <td>${producto.id}</td>
+        <td>${producto.title}</td>
+        <td>${producto.price}</td>
+        <td>${producto.category}</td>
+        <td>${producto.description}</td>
+        <td><img src="${producto.images[0]}" width="100"></td>
+      </tr>
+    `;
+  });
 }
-
 document.addEventListener('DOMContentLoaded', () => {
   
   //Filtrador de categorias
@@ -97,4 +97,6 @@ const asignarCategorias = (categorias) => {
     select.appendChild(opcion);
   });
 };
+
 cargarCategory();
+

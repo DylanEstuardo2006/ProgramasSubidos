@@ -11,6 +11,7 @@ document.getElementById("avatar").src = data.avatar_url;
 document.getElementById("nombre").textContent = data.name;
 document.getElementById("bio").textContent = data.bio;
 document.getElementById("ubicacion").textContent = data.location;
+document.getElementById("company").textContent = data.companyBNB;
 });
 
 // REPOS
@@ -40,12 +41,27 @@ data.forEach(repo => {
 fetch(urlApiFollowers)
 .then(res => res.json())
 .then(data => {
+
 const contenedor = document.getElementById("listaFollowers");
 
 data.forEach(follower => {
+
+  const item = document.createElement("div");
+  item.classList.add("follower-item");
+
   const img = document.createElement("img");
   img.src = follower.avatar_url;
   img.title = follower.login;
-  contenedor.appendChild(img);
+
+  const enlace = document.createElement("a");
+  enlace.href = follower.html_url;
+  enlace.textContent = follower.login;
+  enlace.target = "_blank";
+
+  item.appendChild(img);
+  item.appendChild(enlace);
+
+  contenedor.appendChild(item);
+
 });
 });
